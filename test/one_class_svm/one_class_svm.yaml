@@ -1,0 +1,46 @@
+$schema: http://azureml/sdk-2-0/CommandComponent.json
+name: designer.one.class.svm 
+version: 0.0.1
+display_name: One Class SVM
+type: CommandComponent
+tags: 
+  from_schema_snippet: true
+inputs: 
+  train_dataset: 
+    type: DataFrameDirectory
+    description: input dataset 
+  nu: 
+    type: Float
+    optional: true
+    default: 0.5
+    description: An upper bound on the fraction of training errors and a lower bound of the fraction of support vectors. Should be in the interval (0, 1]. By default 0.5.  
+  tolerance:
+    type: Float
+    optional: true
+    default: 0.001
+    description: Tolerance for stopping criterion. By default 0.001.
+outputs: 
+  model_path: 
+    type: AnyDirectory
+    description: Trained model  
+environment: 
+  conda: 
+    conda_dependencies: 
+      name: project_environment
+      channels: 
+        - defaults
+      dependencies: 
+        - python=3.7.6
+        - pip=20.2
+        - pip:
+          - azureml-sdk
+          - azureml-designer-core==0.0.54
+          - azureml-dataset-runtime[fuse,pandas]
+          - pandas
+          - scikit-learn
+          - numpy      
+  os: Linux
+command: < Your command file name >  --< Your 1st Input name > {inputs.< Your 1st Input name >} [--< Your 2nd Input name > {inputs.< Your 2nd Input name >}]  --< Your 1st Output name > {outputs.< Your 1st Output name >} 
+
+
+
