@@ -1,0 +1,1 @@
+To run on windows, install MPI Tools and SDK (https://www.microsoft.com/en-us/download/details.aspx?id=57467)
