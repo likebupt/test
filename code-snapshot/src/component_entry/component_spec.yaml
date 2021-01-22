@@ -3,7 +3,7 @@
 
 $schema: http://azureml/sdk-2-0/CommandComponent.json
 name: microsoft.com.azureml.samples.module_with_custom_source_directory
-version: 0.0.1
+version: 0.0.3
 display_name: Module with custom Source Directory
 type: CommandComponent
 description: A sample to demostrate modules with customized source directory
