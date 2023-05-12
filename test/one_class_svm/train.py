@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.svm import OneClassSVM 
+from sklearn.preprocessing import OneHotEncoder
 import joblib
 
 # set input parameters

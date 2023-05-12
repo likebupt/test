@@ -1,0 +1,7 @@
+channels:
+- defaults
+dependencies:
+- pip=20.2
+- python=3.8
+name: llm
+
