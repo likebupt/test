@@ -3,8 +3,8 @@ import logging.handlers
 import os
 import pickle
 from azureml.data.azure_storage_datastore import AzureFileDatastore, AzureBlobDatastore
-from common.textclscnn.trainer import Trainer
-from common.textclscnn.utils.args_util import train_args
+from textclscnn.trainer import Trainer
+from textclscnn.utils.args_util import train_args
 
 
 root_logger = logging.getLogger()
